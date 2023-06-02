@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:id="@+id/group"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/pagebkg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/toolbar"
+        android:elevation="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Thông Tin"
+            android:textColor="@color/lavender"
+            android:textSize="25dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/textDHTError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cảm biến bị lỗi hoặc \nchưa được kết nối với Internet"
+
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            android:elevation="20dp"
+            android:textAlignment="center"
+            android:padding="10dp"
+            android:visibility="invisible"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardTemp"
+            android:layout_width="170dp"
+            android:layout_height="180dp"
+            android:elevation="10dp"
+            app:cardBackgroundColor="@color/hex"
+            app:cardCornerRadius="20dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="20dp">
+
+            <RelativeLayout
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:background="@drawable/card"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+
+                    android:text="Nhiệt Độ"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"/>
+
+                <ProgressBar
+                    android:id="@+id/proTem"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:progress="50"
+                    android:rotation="180"
+                    android:min="-20"
+                    android:max="60"
+                    android:indeterminateOnly="false"
+                    android:progressDrawable="@drawable/circle"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"/>
+
+
+                <TextView
+                    android:id="@+id/Temperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+
+                    android:text="29.30 C"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="90dp"/>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardHum"
+            android:layout_width="170dp"
+            android:layout_height="180dp"
+            android:elevation="10dp"
+            app:cardBackgroundColor="@color/hex"
+            app:cardCornerRadius="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp">
+
+            <RelativeLayout
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:background="@drawable/card"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+
+                    android:text="Độ Ẩm"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"/>
+
+                <ProgressBar
+                    android:id="@+id/proHum"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:progress="50"
+                    android:rotation="180"
+                    android:min="0"
+                    android:max="95"
+                    android:indeterminateOnly="false"
+                    android:progressDrawable="@drawable/circle"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"/>
+
+                <TextView
+                    android:id="@+id/Humanity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+
+                    android:text="55.00%"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="90dp"/>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardRain"
+            android:layout_width="170dp"
+            android:layout_height="180dp"
+            android:elevation="10dp"
+            app:cardBackgroundColor="@color/hex"
+            app:cardCornerRadius="20dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="190dp">
+            <RelativeLayout
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:background="@drawable/card"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+
+                    android:text="Nước"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"/>
+                <ProgressBar
+                    android:id="@+id/proRain"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:progress="50"
+                    android:rotation="180"
+                    android:min="0"
+                    android:max="1024"
+                    android:indeterminateOnly="false"
+                    android:progressDrawable="@drawable/circle"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"/>
+                <TextView
+                    android:id="@+id/Rainfall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+
+                    android:text="50 ml"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="90dp"/>
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardLight"
+            android:layout_width="170dp"
+            android:layout_height="180dp"
+            android:elevation="10dp"
+            app:cardBackgroundColor="@color/hex"
+            app:cardCornerRadius="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="190dp">
+            <RelativeLayout
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:background="@drawable/card"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+
+                    android:text="Ánh sáng"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"/>
+                <ImageView
+                    android:id="@+id/WeatherIcon"
+                    android:layout_width="300dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/sun"
+                    android:padding="10dp"
+                    android:layout_marginTop="30dp"/>
+                <TextView
+                    android:id="@+id/light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sáng"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="20dp"/>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <androidx.cardview.widget.CardView
+            android:layout_width="360dp"
+            android:layout_height="270dp"
+            android:elevation="10dp"
+            app:cardBackgroundColor="@color/hex"
+            app:cardCornerRadius="20dp">
+            <RelativeLayout
+                android:layout_width="360dp"
+                android:layout_height="280dp"
+                android:background="@drawable/card"
+                android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:layout_width="310dp"
+                android:layout_height="290dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/card">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="Led"
+                    android:textColor="@color/black"
+                    android:textSize="17sp" />
+                <ImageView
+                    android:id="@+id/imageLed1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="50dp"
+                    android:src="@drawable/lamp_off" />
+                <TextView
+                    android:id="@+id/textLed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageLed1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="Tắt"
+                    android:textColor="@color/black"
+                    android:textSize="17sp" />
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="35dp"
+                    android:elevation="10dp"
+                    app:cardCornerRadius="15dp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnLed1"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/hex"
+                        android:text="Mở"
+                        android:textColor="@color/white"/>
+
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

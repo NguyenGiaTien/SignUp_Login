@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SignUp Login</string>
+    <string name="sun">Light</string>
+    <string name="night">Moon</string>
+    <string name="symbol_celsius">℃</string>
+    <string name="symbol_humidity">%</string>
+    <string name="is_null">null</string>
+</resources>
